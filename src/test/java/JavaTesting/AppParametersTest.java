@@ -22,6 +22,12 @@ public class AppParametersTest {
         Assert.assertEquals("retorna la url de forma correcta",URL_EXPECTED,AppParameters.deployedURL());
     }
     @Test
+    public void correctHash(){
+        AppParameters.PasswordWithSalt();
+        String correctHash=AppParameters.doHashing(AppParameters.passwordAndSalt);
+        Assert.assertEquals(" hash correct",correctHash,AppParameters.hashPasword);
+    }
+    @Test
     public void singletonCorrectness(){
         AppParameters inst1 =AppParameters.getInstance();
 
