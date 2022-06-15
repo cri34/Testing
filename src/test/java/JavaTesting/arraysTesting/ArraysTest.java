@@ -1,4 +1,4 @@
-package arraysTesting;
+package JavaTesting.arraysTesting;
 
 import org.junit.Test;
 
